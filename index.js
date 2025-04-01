@@ -2,7 +2,8 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
-import route from "./routes/patientRoutes.js";
+import patientRoutes from './routes/patientRoutes.js';
+import userRoutes from './routes/userRoutes.js';
 import swaggerUi from "swagger-ui-express";  // Import swagger-ui-express
 import swaggerJsdoc from "swagger-jsdoc";  
 const app = express();
@@ -41,4 +42,5 @@ mongoose.connect(mongourl).then(()=>{
         console.log(`Server is running on port ${PORT}`)
     })
 }).catch((error)=>console.log(error));
-app.use("/api/patient",route);
+app.use("/api",patientRoutes);
+app.use("/api",userRoutes);

@@ -1,21 +1,27 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
+
+const ClinicalSchema = new mongoose.Schema({
+    date: { type: Date, required: true },
+    bph: { type: Number, required: true },
+    bpl: { type: Number, required: true },
+    rr: { type: Number, required: true },
+    bol: { type: Number, required: true },
+    hbr: { type: Number, required: true }
+});
 
 const PatientSchema = new mongoose.Schema({
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     phone: { type: String, required: true },
     bdate: { type: Date, required: true },
-    gender: { type: String, required: true },    
+    gender: { type: String, required: true, enum: ['Male', 'Female', 'Other'] },
     address: { type: String, required: true },
-    status: { type: String, required: true },
+    status: { type: String, required: true, enum: ['Critical', 'Normal'] },
     image: { type: String, required: false },
-    clinical: [{
-        bph: { type: Number, required: true, default: 0 },  // Blood Pressure High (systolic)
-        bpl: { type: Number, required: true, default: 0 },  // Blood Pressure Low (diastolic)
-        rr: { type: Number, required: true, default: 0 },   // Respiratory Rate
-        bol: { type: Number, required: true, default: 0 },  // Blood Oxygen Level
-        hbr: { type: Number, required: true, default: 0 }   // Heart Beat Rate
-    }]
-}, { timestamps: true });
- 
+    user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    clinical: [ClinicalSchema]
+});
+
 export default mongoose.model("patients", PatientSchema);
+
+
