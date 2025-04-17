@@ -1,7 +1,7 @@
 import express from 'express';
 import { body, param } from 'express-validator';
 import { create, fetch, fetchById, update, deletePatient, addClinicalData, deleteClinicalData, fetchClinicalDataByIndex,
-    updateClinicalData, findCriticalPatients} from '../controller/patientController.js';
+    updateClinicalData, findCriticalPatients, countPatientsByUserId } from '../controller/patientController.js';
 
 const router = express.Router();
 
@@ -362,5 +362,34 @@ router.delete(
  *         description: Internal server error
  */
 router.get("/patients/critical", findCriticalPatients);
+
+
+/**
+ * @swagger
+ * /api/patients/count/{userId}:
+ *   get:
+ *     summary: Count patients related to a specific user
+ *     parameters:
+ *       - in: path
+ *         name: userId
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: The ID of the caregiver user
+ *     responses:
+ *       200:
+ *         description: Number of related patients
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 userId:
+ *                   type: string
+ *                 patientCount:
+ *                   type: integer
+ */
+router.get('/patients/count/:userId', countPatientsByUserId);
+
 
 export default router;

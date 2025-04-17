@@ -265,4 +265,17 @@ export const deleteClinicalData = async (req, res) => {
 };
 
   
+// GET
+// Count patients by user ID
+export const countPatientsByUserId = async (req, res) => {
+    const { userId } = req.params;
+    try {
+        const count = await Patient.countDocuments({ user_id: userId });
+        res.status(200).json({ userId, patientCount: count });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+};
+
 

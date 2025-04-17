@@ -1,5 +1,8 @@
 [{
-  "name": "John Doe",
+  "_id": {
+    "$oid": "67eaf885d9b1d7b0167511df"
+  },
+  "name": "John -- Doe",
   "email": "john.doe@example.com",
   "phone": "123-456-7890",
   "bdate": "1965-05-15T00:00:00.000Z",
@@ -7,36 +10,40 @@
   "address": "123 Elm Street, Springfield, IL",
   "status": "Critical",
   "image": "John Doe.jpg",
+  "user_id": {
+    "$oid": "67e5b0e90fa88de3cbe77fe3"
+  },
   "clinical": [
     {
+      "date": "2025-03-25",
       "bph": 120,
       "bpl": 80,
       "rr": 16,
       "bol": 98,
-      "hbr": 75,
-      "testDate": "2024-10-18T08:00:00.000Z"
+      "hbr": 75
     },
     {
+      "date": "2025-03-26",
       "bph": 122,
       "bpl": 82,
       "rr": 15,
       "bol": 99,
-      "hbr": 74,
-      "testDate": "2024-10-18T12:00:00.000Z"
+      "hbr": 74
     },
     {
+      "date": "2025-03-27",
       "bph": 118,
       "bpl": 78,
       "rr": 17,
       "bol": 97,
-      "hbr": 76,
-      "testDate": "2024-10-18T16:00:00.000Z"
+      "hbr": 76
     }
-  ],
-  "createdAt": "2024-10-18T22:00:00.000Z",
-  "updatedAt": "2024-10-19T10:00:00.000Z"
+  ]
 },
 {
+  "_id": {
+    "$oid": "67eaf885d9b1d7b0167511e0"
+  },
   "name": "Jane Smith",
   "email": "jane.smith@example.com",
   "phone": "987-654-3210",
@@ -45,28 +52,32 @@
   "address": "456 Oak Avenue, Metropolis, NY",
   "status": "normal",
   "image": "Jane Smith.jpg",
+  "user_id": {
+    "$oid": "67e5b0e90fa88de3cbe77fe3"
+  },
   "clinical": [
     {
+      "date": "2025-03-25",
       "bph": 135,
       "bpl": 88,
       "rr": 20,
       "bol": 96,
-      "hbr": 78,
-      "testDate": "2024-10-18T08:30:00.000Z"
+      "hbr": 78
     },
     {
+      "date": "2025-03-26",
       "bph": 140,
       "bpl": 90,
       "rr": 21,
       "bol": 94,
-      "hbr": 80,
-      "testDate": "2024-10-18T14:00:00.000Z"
+      "hbr": 80
     }
-  ],
-  "createdAt": "2024-10-18T22:05:00.000Z",
-  "updatedAt": "2024-10-19T10:30:00.000Z"
+  ]
 },
 {
+  "_id": {
+    "$oid": "67eaf885d9b1d7b0167511e1"
+  },
   "name": "Alice Johnson",
   "email": "alice.johnson@example.com",
   "phone": "555-123-4567",
@@ -75,20 +86,24 @@
   "address": "789 Pine Lane, Gotham City",
   "status": "normal",
   "image": "Alice Johnson.jpg",
+  "user_id": {
+    "$oid": "67e5b0e90fa88de3cbe77fe3"
+  },
   "clinical": [
     {
+      "date": "2025-03-25",
       "bph": 160,
       "bpl": 95,
       "rr": 19,
       "bol": 95,
-      "hbr": 80,
-      "testDate": "2024-10-18T09:00:00.000Z"
+      "hbr": 80
     }
-  ],
-  "createdAt": "2024-10-18T22:10:00.000Z",
-  "updatedAt": "2024-10-18T22:10:00.000Z"
+  ]
 },
 {
+  "_id": {
+    "$oid": "67eaf885d9b1d7b0167511e2"
+  },
   "name": "Robert Brown",
   "email": "robert.brown@example.com",
   "phone": "444-567-8901",
@@ -97,20 +112,24 @@
   "address": "321 Cedar Street, Star City",
   "status": "critical",
   "image": "Robert Brown.jpg",
+  "user_id": {
+    "$oid": "67e5b0e90fa88de3cbe77fe3"
+  },
   "clinical": [
     {
+      "date": "2025-03-25",
       "bph": 45,
       "bpl": 85,
       "rr": 15,
       "bol": 95,
-      "hbr": 85,
-      "testDate": "2024-10-18T10:00:00.000Z"
+      "hbr": 85
     }
-  ],
-  "createdAt": "2024-10-18T22:15:00.000Z",
-  "updatedAt": "2024-10-18T22:15:00.000Z"
+  ]
 },
 {
+  "_id": {
+    "$oid": "67eaf885d9b1d7b0167511e3"
+  },
   "name": "John Smith",
   "email": "john.smith@example.com",
   "phone": "997-556-3210",
@@ -119,24 +138,25 @@
   "address": "456 Oak Avenue, Metropolis, NY",
   "status": "Critical",
   "image": "john Smith.jpg",
+  "user_id": {
+    "$oid": "67e5b0e90fa88de3cbe77fe3"
+  },
   "clinical": [
     {
+      "date": "2025-03-25",
       "bph": 135,
       "bpl": 88,
       "rr": 20,
       "bol": 96,
-      "hbr": 78,
-      "testDate": "2024-10-18T11:00:00.000Z"
+      "hbr": 78
     },
     {
+      "date": "2025-03-26",
       "bph": 75,
       "bpl": 20,
       "rr": 10,
       "bol": 80,
-      "hbr": 55,
-      "testDate": "2024-10-18T15:00:00.000Z"
+      "hbr": 55
     }
-  ],
-  "createdAt": "2024-10-18T22:05:00.000Z",
-  "updatedAt": "2024-10-19T10:30:00.000Z"
+  ]
 }]
